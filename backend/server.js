@@ -11,7 +11,7 @@ import wishlistRouter from "./routes/wishlistRoute.js";
 
 // App Config
 const app = express();
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
 
