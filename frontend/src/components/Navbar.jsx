@@ -52,12 +52,13 @@ const Navbar = () => {
                     <p>CONTACT</p>
                     <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
                 </NavLink>
-                <button
-                    onClick={() => navigate("/admin")}
+                <a
+                    href="https://shop-sphere-admin-rust.vercel.app/"
+                    target="_blank"
                     className="px-2 py-2 border border-gray-700 text-center rounded-full text-gray-700 hover:bg-gray-700 hover:text-white transition text-[12px]"
                 >
                     Admin Panel
-                </button>
+                </a>
             </ul>
             <div className="flex items-center gap-6">
                 <img
