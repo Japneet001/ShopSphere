@@ -3,7 +3,6 @@ import adminAuth from "../middlewares/adminAuth.js";
 import {
     allOrders,
     placeOrderCOD,
-    placeOrderRazorpay,
     placeOrderStripe,
     updateStatus,
     userOrders,
@@ -20,12 +19,11 @@ orderRouter.post("/status", adminAuth, updateStatus);
 // Payment Features
 orderRouter.post("/place", authUser, placeOrderCOD);
 orderRouter.post("/stripe", authUser, placeOrderStripe);
-orderRouter.post("/razorpay", authUser, placeOrderRazorpay);
 
 // User Features
 orderRouter.post("/userorders", authUser, userOrders);
 
 // verify Payment
-orderRouter.post('/verifyStripe',authUser,verifyStripe)
+orderRouter.post("/verifyStripe", authUser, verifyStripe);
 
 export default orderRouter;

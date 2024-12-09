@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import RelatedProducts from "../components/RelatedProducts";
-// import toast from "react-toastify";
 
 const Product = () => {
     const { productId } = useParams();
@@ -17,8 +16,6 @@ const Product = () => {
             if (item._id === productId) {
                 setProductData(item);
                 setImage(item.image[0]);
-                // console.log(productData);
-
                 return null;
             }
         });
@@ -27,6 +24,7 @@ const Product = () => {
     useEffect(() => {
         fetchProductData();
     }, [productId, products]);
+
     return productData ? (
         <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
             {/* Product Data */}
