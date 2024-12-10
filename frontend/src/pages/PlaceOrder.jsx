@@ -78,10 +78,11 @@ const PlaceOrder = () => {
                 
                 case "stripe":
                     const responseStripe = await axios.post(backendUrl+'/api/order/stripe',orderData,{headers:{token}});
+                    console.log(responseStripe);
                     if(responseStripe.data.success){
-                        const{session_url} = responseStripe.data
-                        if(session_url) {
-                            window.location.replace(session_url);
+                        const{success_url} = responseStripe.data
+                        if(success_url) {
+                            window.location.replace(success_url);
                             navigate("/orders");
                         }
                         else {
