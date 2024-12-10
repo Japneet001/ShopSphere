@@ -10,7 +10,7 @@ const List = ({ token }) => {
         try {
             const response = await axios.get(backendUrl + "/api/product/list");
 
-            if (response.statusText === "OK") {
+            if (response.status == 200) {
                 setList(response.data.products);
             } else {
                 toast.error(response.data.message || "An error occurred.");
