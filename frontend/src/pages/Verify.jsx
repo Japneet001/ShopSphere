@@ -13,13 +13,6 @@ const Verify = () => {
     const [loading, setLoading] = useState(true); // Add a loading state
 
     const verifyPayment = async () => {
-        if (!token || !success || !orderId) {
-            toast.error("Invalid verification parameters.");
-            navigate('/cart'); // Redirect to cart if parameters are missing
-            setLoading(false);
-            return;
-        }
-
         try {
             const response = await axios.post(
                 `${backendUrl}/api/order/verifyStripe`,
