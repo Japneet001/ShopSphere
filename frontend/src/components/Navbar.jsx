@@ -78,7 +78,7 @@ const Navbar = () => {
                         <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
                             <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
                                 <p
-                                    onClick={() => navigate("/orders")}
+                                    onClick={() => navigate("/wishlist")}
                                     className="cursor-pointer hover:text-black"
                                 >
                                     Wish List
