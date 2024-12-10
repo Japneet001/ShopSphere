@@ -223,7 +223,8 @@ const ShopContextProvider = (props) => {
     const getProductsData = async () => {
         try {
             const response = await axios.get(backendUrl + "/api/product/list");
-            if (response.statusText === "OK") {
+            console.log(response);
+            if (response.status == 200) {
                 setProducts(response.data.products);
             } else {
                 toast.error(response.data.message || "Error Loading Products");
