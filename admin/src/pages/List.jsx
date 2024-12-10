@@ -15,6 +15,7 @@ const List = ({ token }) => {
             } else {
                 toast.error(response.data.message || "An error occurred.");
             }
+            console.log(response);
         } catch (error) {
             console.log(error);
             toast.error(error.message);
